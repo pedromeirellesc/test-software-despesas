@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Lançamento de Despesas</title>
+</head>
+<body>
+<h1>Lançamento de Despesas</h1>
+<form>
+    <label for="idBase">Base física</label>
+    <select name="idBase" id="idBase" class="form-control">
+        <option value="base1">Base física Sul</option>
+        <option value="base2">Base física Norte</option>
+        <option value="base3">Base física Sudeste</option>
+    </select>
+
+    <label for="idCredor">Credor</label>
+    <select name="idCredor" id="idCredor" class="form-control">
+        <option value="credor1">Sabrina Fabiana Cristiane Galvão</option>
+        <option value="credor2">Giovanni Gustavo da Rocha</option>
+        <option value="credor3">Joaquim Bento Murilo Fogaça</option>
+    </select>
+
+    <label for="nomeDespesa">Nome da despesa</label>
+    <input type="text" id="nomeDespesa" name="nomeDespesa" class="form-control">
+
+    <label for="competenciaDespesa">Mês de competência</label>
+    <input type="month" id="competenciaDespesa" name="competenciaDespesa" class="form-control">
+
+    <label for="dataVencimento">Data de vencimento</label>
+    <input type="date" id="dataVencimento" name="dataVencimento" class="form-control">
+
+    <label for="valorLiquido">Valor líquido</label>
+    <input type="number" step="0.01" id="valorLiquido" name="valorLiquido" class="form-control">
+
+    <label for="valorMulta">Valor de multa</label>
+    <input type="number" step="0.01" id="valorMulta" name="valorMulta" class="form-control">
+
+    <label for="valorCorrecao">Valor de correção</label>
+    <input type="number" step="0.01" id="valorCorrecao" name="valorCorrecao" class="form-control">
+
+    <input type="submit" value="Salvar" class="btn btn-primary m-3" id="btnSubmit">
+</form>
+</body>
+</html>
