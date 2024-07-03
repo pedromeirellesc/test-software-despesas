@@ -1,10 +1,14 @@
 package pages;
 
 import base.BasePage;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
+
+import java.lang.reflect.Array;
 
 public class LancamentoDespesaPage extends BasePage {
 
@@ -59,19 +63,24 @@ public class LancamentoDespesaPage extends BasePage {
         return this;
     }
 
-//    public LancamentoDespesaPage competenciaDespesa() {
-//        Select select = new Select(selIdCredor);
-//        select.selectByIndex(idCredor);
-//
-//        return this;
-//    }
+    public LancamentoDespesaPage competenciaDespesa(String competenciaDespesa) {
 
-//    public LancamentoDespesaPage dataVencimento() {
-//        Select select = new Select(selIdCredor);
-//        select.selectByIndex(idCredor);
-//
-//        return this;
-//    }
+        String date[] = competenciaDespesa.split("-");
+        String month = date[0];
+        String year = date[1];
+
+        dateCompetenciaDespesa.sendKeys(month);
+        dateCompetenciaDespesa.sendKeys(Keys.TAB);
+        dateCompetenciaDespesa.sendKeys(year);
+
+        return this;
+    }
+
+    public LancamentoDespesaPage dataVencimento(String dataVencimento) {
+        dateDataVencimento.sendKeys(dataVencimento);
+
+        return this;
+    }
 
     public LancamentoDespesaPage valorLiquido(String valorLiquido) {
         txtValorLiquido.sendKeys(valorLiquido);

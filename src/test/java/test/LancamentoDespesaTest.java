@@ -10,7 +10,12 @@ public class LancamentoDespesaTest extends BaseTest {
     public void realizarLancamentoDespesa() {
         LancamentoDespesaPage page = new LancamentoDespesaPage(getDriver());
 
-        page.selectIdBase(1).selectIdCredor(1).nomeDespesa("Nome teste").valorLiquido("10,00").submitForm();
+        page.selectIdBase(1)
+                .selectIdCredor(1)
+                .nomeDespesa("Nome teste")
+                .competenciaDespesa("07-2024")
+                .dataVencimento("10-07-2024")
+                .valorLiquido("10.00");
     }
 
 }
