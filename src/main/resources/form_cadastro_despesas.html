@@ -3,7 +3,30 @@
 <head>
     <meta charset="UTF-8">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script>
+        function store() {
+
+            const idBase = document.getElementById('idBase');
+            const idCredor = document.getElementById('idCredor');
+
+            const selectedBaseText = idBase.options[idBase.selectedIndex].text;
+            const selectedCredorText = idCredor.options[idCredor.selectedIndex].text;
+
+            document.getElementById('result').innerHTML =
+                "<span>Lançamento de despesa realizado com sucesso</span><br/>"
+                + "<div id='resultBaseFisica'>Base física: " + selectedBaseText + "</div>"
+                + "<div id='resultCredor'>Credor: " + selectedCredorText + "</div>"
+                + "<div id='resultNomeDespesa'>Nome despesa: " + document.getElementById('nomeDespesa').value + "</div>"
+                + "<div id='resultMesCompetencia'>Mês competência: " + document.getElementById('competenciaDespesa').value + "</div>"
+                + "<div id='resultDataVencimento'>Data vencimento: " + document.getElementById('dataVencimento').value + "</div>"
+                + "<div id='resultValorLiquido'>Valor líquido: " + document.getElementById('valorLiquido').value + "</div>"
+                + "<div id='resultValorMulta'>Valor multa: " + document.getElementById('valorMulta').value + "</div>"
+                + "<div id='resultaValorCorrecao'>Valor correção: " + document.getElementById('valorCorrecao').value + "</div>";
+        }
+    </script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <title>Lançamento de Despesas</title>
 </head>
@@ -42,7 +65,8 @@
     <label for="valorCorrecao">Valor de correção</label>
     <input type="number" step="0.01" id="valorCorrecao" name="valorCorrecao" class="form-control">
 
-    <input type="submit" value="Salvar" class="btn btn-primary m-3" id="btnSubmit">
 </form>
+<button class="btn btn-primary m-3" id="btnSubmit" onclick="store();">Salvar</button>
+<div id="result"></div>
 </body>
 </html>
