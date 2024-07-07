@@ -2,10 +2,20 @@ package test;
 
 import base.BaseTest;
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pages.LancamentoDespesaPage;
 
 public class LancamentoDespesaTest extends BaseTest {
+
+    public LancamentoDespesaTest() {
+        super("\\src\\main\\resources\\form_cadastro_despesas.html");
+    }
+
+    @BeforeClass
+    public void setup() {
+        super.preCond();
+    }
 
     @Test
     public void realizarLancamentoDespesa() {
