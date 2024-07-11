@@ -13,6 +13,7 @@ public class CadastroUsuarioTest extends BaseTest {
         super("\\src\\main\\resources\\form_cadastro_usuario.html");
     }
 
+    
     @BeforeClass
     public void setup() {
         super.preCond();
