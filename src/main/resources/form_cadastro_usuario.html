@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <script>
+        function validarFormulario() {
+            var nomeUsuario = document.getElementById('nomeUsuario').value;
+            var emailUsuario = document.getElementById('emailUsuario').value;
+            var loginUsuario = document.getElementById('loginUsuario').value;
+            var senhaUsuario = document.getElementById('senhaUsuario').value;
+
+            if (nomeUsuario === '' || emailUsuario === '' || loginUsuario === '' || senhaUsuario === '') {
+                alert('Por favor, preencha todos os campos.');
+                return false;
+            }
+
+
+            return true;
+        }
+    </script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Cadastro de Usuarios</title>
+</head>
+<body>
+<h1>Cadastro de Usuarios</h1>
+<form>
+
+
+    <label for="nomeUsuario">Nome do Usuario</label>
+    <input type="text" id="nomeUsuario" name="nomeUsuario" class="form-control">
+
+    <label for="emailUsuario">Email do Usuario</label>
+    <input type="email" id="emailUsuario" name="emailUsuario" class="form-control">
+
+    <label for="loginUsuario">Login do Usuario</label>
+    <input type="text" id="loginUsuario" name="loginUsuario" class="form-control">
+
+    <label for="senhaUsuario">Senha do Usuario</label>
+    <input type="password" id="senhaUsuario" name="senhaUsuario" class="form-control">
+
+    <button type="submit" id="botao">Cadastrar Usuario</button>
+</form>
+
+<div id="successMessage" class="success" style="display: none;">
+    Cadastro realizado com sucesso!
+</div>
+
+</body>
+</html>
