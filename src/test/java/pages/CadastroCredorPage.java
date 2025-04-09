@@ -45,10 +45,6 @@ public class CadastroCredorPage extends BasePage {
         return this;
     }
 
-    //public void acessarPagina() {
-    //    driver.get("https://www.google.com.br/");
-    // }
-
     public CadastroCredorPage cadastroTelefone(Integer idTelefone) {
         this.telefone.sendKeys(idTelefone.toString());
         return this;
